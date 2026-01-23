@@ -19,9 +19,14 @@ src/
 ## Commands
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production
+- `npm run build` - Build for production (static export)
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+
+## Deployment (Render.com)
+
+- **Build Command**: `npm run build`
+- **Publish Directory**: `out`
 
 ## Configuration
 
