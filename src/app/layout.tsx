@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
+import { Anton, Inter, Montserrat } from "next/font/google";
 
-const rubik = Rubik({
-  variable: "--font-rubik",
+const anton = Anton({
+  weight: "400",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
+  variable: "--anton",
 });
-
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--inter",
+});
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--montserrat",
+});
 export const metadata: Metadata = {
   title: "exp.waw",
   description: "exp.waw",
@@ -21,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${rubik.variable} antialiased bg-background text-foreground font-sans`}
+        className={`${anton.variable} ${inter.variable} ${montserrat.variable}`}
       >
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );

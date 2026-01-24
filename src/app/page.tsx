@@ -1,47 +1,59 @@
-"use client";
-
-import { Button, Switch } from "@heroui/react";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-
-function ThemeSwitch() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
-  const isDark = theme === "dark";
-
-  return (
-    <Switch
-      isSelected={isDark}
-      onValueChange={(selected) => setTheme(selected ? "dark" : "light")}
-      size="lg"
-      startContent={<span>☀️</span>}
-      endContent={<span>🌙</span>}
-    />
-  );
-}
+import styles from "./page.module.css";
+import { data } from "../data/data";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
-      <div className="absolute top-4 right-4">
-        <ThemeSwitch />
-      </div>
-      <h1 className="text-4xl font-bold">Next.js + HeroUI</h1>
-      <p className="text-lg text-default-500">Hello World</p>
-      <div className="flex gap-4">
-        <Button color="primary">Primary</Button>
-        <Button color="secondary">Secondary</Button>
-        <Button color="success">Success</Button>
-        <Button color="warning">Warning</Button>
-        <Button color="danger">Danger</Button>
-      </div>
+    <div className={styles.container}>
+      <section>
+        <h1 className={styles.title}>
+          Exp<span>erimental</span>
+          <br />
+          Open
+          <br />
+          Space
+        </h1>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content4}>
+          <h2 className={styles.subtitle}>[{data.en.concept.title}]</h2>
+          <p>{data.en.concept.description}</p>
+        </div>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content3}>
+          <h2 className={styles.subtitle}>[{data.en.style.title}]</h2>
+          <p>{data.en.style.description}</p>
+        </div>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content1}>
+          <div className={styles.contentItem}>
+            <h2 className={styles.subtitle}>[Upcoming]</h2>
+            <p>Please let me know on IG if you're coming</p>
+          </div>
+          <div className={styles.contentItem}>
+            <h3 className={styles.subtitle}>[Location]</h3>
+            <p>Ruch Space, Warszawa, ul.Mikołaja Drygały 5</p>
+          </div>
+          <div className={styles.contentItem}>
+            <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
+            <p>Saturday 31 January | 19:00 - 21:00 | 30 PLN</p>
+          </div>
+          <div className={styles.contentItem}>
+            <h3 className={styles.subtitle}>[Links]</h3>
+            <a
+              href={"https://maps.app.goo.gl/3RGo3vBGBMLo9btW7"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Maps Location
+            </a>
+            <a href="/event.ics" target="_blank" rel="noopener noreferrer">
+              Calendar Event
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
