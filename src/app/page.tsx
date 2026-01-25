@@ -29,7 +29,7 @@ export default function Home() {
         <div className={styles.content1}>
           <div className={styles.contentItem}>
             <h2 className={styles.subtitle}>[Upcoming]</h2>
-            <p>Please let me know on IG if you're coming</p>
+            <p>Please let me know on IG if you are coming</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Location]</h3>
@@ -51,6 +51,15 @@ export default function Home() {
             <a href="/event.ics" target="_blank" rel="noopener noreferrer">
               Calendar Event
             </a>
+          </div>
+        </div>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content1}>
+          <div className={styles.contentItem}>
+            <h2 className={styles.subtitle}>[Planning]</h2>
+            <p>Saturday, February 7 - CoDa Movement</p>
+            <p>Saturday, February 14 - CoDa Movement</p>
           </div>
         </div>
       </section>

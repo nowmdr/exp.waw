@@ -10,6 +10,9 @@
 .title span:hover {
     opacity: 1;
 }
+.container {
+    padding: 3rem 1.5rem;
+}
 .subtitle {
     font-size: 1.5rem;
     letter-spacing: -0.06em;
@@ -17,11 +20,10 @@
 }
 
 .sectionGrid {
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
 }
 .content4 {
     grid-column: 4 / span 1;
@@ -71,10 +73,11 @@
     }
 }
 @media (max-width: 768px) {
+    .container {
+        padding: 3rem 1rem;
+    }
     .sectionGrid {
         grid-template-columns: 1fr;
-        padding-left: 1rem;
-        padding-right: 1rem;
         padding-top: 2rem;
     }
     .content4 {
