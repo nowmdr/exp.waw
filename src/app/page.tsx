@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { data } from "../data/data";
+import RegisterForm from "../components/forms/RegisterForm";
 
 export default function Home() {
   return (
@@ -29,28 +30,38 @@ export default function Home() {
         <div className={styles.content1}>
           <div className={styles.contentItem}>
             <h2 className={styles.subtitle}>[Upcoming]</h2>
-            <p>Please let me know on IG if you are coming</p>
+            <p>Please fill form below to register</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Location]</h3>
-            <p>Ruch Space, Warszawa, ul.Mikołaja Drygały 5</p>
+            <p>CoDa Movement, Kijowska 11, 03-743 Warszawa</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
-            <p>Saturday 31 January | 19:00 - 21:00 | 30 PLN</p>
+            <p>Saturday, February 7 | 19:00 - 21:00 | 20 PLN</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Links]</h3>
             <a
-              href={"https://maps.app.goo.gl/3RGo3vBGBMLo9btW7"}
+              href={
+                "https://www.google.com/maps/place/Studio+Ruchu+i+Yogi+CoDa+Movement/@52.2532555,21.0462897,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecd0051fd61f3:0xab0b446522e1b4c5!8m2!3d52.2532522!4d21.0488646!16s%2Fg%2F11lnn2tkpn?hl=pl&entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
+              }
               target="_blank"
               rel="noopener noreferrer"
             >
               Maps Location
             </a>
-            <a href="/event.ics" target="_blank" rel="noopener noreferrer">
+            {/*<a href="/event.ics" target="_blank" rel="noopener noreferrer">
               Calendar Event
-            </a>
+            </a>*/}
+          </div>
+        </div>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content1}>
+          <div className={styles.contentItem}>
+            <h2 className={styles.subtitle}>[Register]</h2>
+            <RegisterForm />
           </div>
         </div>
       </section>
@@ -58,7 +69,6 @@ export default function Home() {
         <div className={styles.content1}>
           <div className={styles.contentItem}>
             <h2 className={styles.subtitle}>[Planning]</h2>
-            <p>Saturday, February 7 - CoDa Movement</p>
             <p>Saturday, February 14 - CoDa Movement</p>
           </div>
         </div>
