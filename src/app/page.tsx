@@ -38,7 +38,7 @@ export default function Home() {
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
-            <p>Saturday, February 7 | 19:00 - 21:00 | 20 PLN</p>
+            <p>Saturday, February 28 | 19:30 - 21:00 | 20 PLN</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Links]</h3>
@@ -69,7 +69,8 @@ export default function Home() {
         <div className={styles.content1}>
           <div className={styles.contentItem}>
             <h2 className={styles.subtitle}>[Planning]</h2>
-            <p>Saturday, February 14 - CoDa Movement</p>
+            <p>Saturday, March 7 - CoDa Movement</p>
+            <p>Saturday, March 21 - CoDa Movement</p>
           </div>
         </div>
       </section>

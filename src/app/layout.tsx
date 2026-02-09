@@ -18,9 +18,31 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--montserrat",
 });
+
 export const metadata: Metadata = {
-  title: "exp.waw",
-  description: "exp.waw",
+  title: "Experimental Dance Community – Exchange, Movement & Ideas",
+  description:
+    "A collaborative space for experimental dance and movement. Connect with a community of dancers, share ideas, explore new practices, and exchange experiences across styles, bodies, and perspectives.",
+  keywords: [
+    "experimental dance",
+    "dance community",
+    "movement research",
+    "dance exchange",
+    "improvisation",
+    "contemporary dance",
+    "somatic practices",
+    "embodied practice",
+    "choreography",
+    "dance ideas",
+    "dance workshops",
+    "creative movement",
+  ],
+  openGraph: {
+    title: "Experimental Dance Community – Exchange, Movement & Ideas",
+    description:
+      "Join a collaborative space for experimental dance and movement. Share ideas, practices, and experiences with a global community of movers.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
