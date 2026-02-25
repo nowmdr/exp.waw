@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import { data } from "../data/data";
 import RegisterForm from "../components/forms/RegisterForm";
+import AgendaSection from "../components/AgendaSection";
 
 export default function Home() {
   return (
@@ -29,16 +30,12 @@ export default function Home() {
       <section className={styles.sectionGrid}>
         <div className={styles.content1}>
           <div className={styles.contentItem}>
-            <h2 className={styles.subtitle}>[Upcoming]</h2>
-            <p>Please fill form below to register</p>
-          </div>
-          <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Location]</h3>
             <p>CoDa Movement, Kijowska 11, 03-743 Warszawa</p>
           </div>
           <div className={styles.contentItem}>
-            <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
-            <p>Saturday, February 28 | 19:30 - 21:00 | 20 PLN</p>
+            <h3 className={styles.subtitle}>[Day | Time]</h3>
+            <p>Saturday, February 28 | 19:30 - 22:30</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Links]</h3>
@@ -51,10 +48,13 @@ export default function Home() {
             >
               Maps Location
             </a>
-            {/*<a href="/event.ics" target="_blank" rel="noopener noreferrer">
-              Calendar Event
-            </a>*/}
           </div>
+        </div>
+      </section>
+
+      <section className={styles.sectionGrid}>
+        <div className={styles.content1}>
+          <AgendaSection />
         </div>
       </section>
       <section className={styles.sectionGrid}>
@@ -62,15 +62,6 @@ export default function Home() {
           <div className={styles.contentItem}>
             <h2 className={styles.subtitle}>[Register]</h2>
             <RegisterForm />
-          </div>
-        </div>
-      </section>
-      <section className={styles.sectionGrid}>
-        <div className={styles.content1}>
-          <div className={styles.contentItem}>
-            <h2 className={styles.subtitle}>[Planning]</h2>
-            <p>Saturday, March 7 - CoDa Movement</p>
-            <p>Saturday, March 21 - CoDa Movement</p>
           </div>
         </div>
       </section>
