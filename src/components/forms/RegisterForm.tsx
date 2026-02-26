@@ -7,6 +7,7 @@ import styles from "./RegisterForm.module.css";
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [ticketType, setTicketType] = useState<"workshop_jam" | "workshop" | "jam">("workshop_jam");
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -28,7 +29,7 @@ export default function RegisterForm() {
           },
           body: JSON.stringify({
             email,
-            fields: { name },
+            fields: { name, ticket_type: ticketType },
             groups: [mailerlite.groupId],
           }),
         },
@@ -42,6 +43,7 @@ export default function RegisterForm() {
       setStatus("success");
       setEmail("");
       setName("");
+      setTicketType("workshop_jam");
     } catch (err) {
       setStatus("error");
       setErrorMessage(
@@ -76,6 +78,27 @@ export default function RegisterForm() {
         onChange={(e) => setName(e.target.value)}
         required
       />
+
+      <div className={styles.radioGroup}>
+        {(
+          [
+            { value: "workshop_jam", label: "Workshop + Jam" },
+            { value: "workshop", label: "Workshop Only" },
+            { value: "jam", label: "Jam Only" },
+          ] as const
+        ).map(({ value, label }) => (
+          <label key={value} className={styles.radioLabel}>
+            <input
+              type="radio"
+              name="ticketType"
+              value={value}
+              checked={ticketType === value}
+              onChange={() => setTicketType(value)}
+            />
+            {label}
+          </label>
+        ))}
+      </div>
 
       <button
         className={styles.submitButton}

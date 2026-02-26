@@ -1,11 +1,22 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0.3rem;
 }
 .input {
     /*padding: 0.5rem;*/
     border: none;
+}
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
 }
 .submitButton {
     padding: 0.25rem;
