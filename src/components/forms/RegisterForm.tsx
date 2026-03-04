@@ -11,12 +11,9 @@ export default function RegisterForm() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setStatus("loading");
-    setErrorMessage("");
 
     try {
       const res = await fetch(
@@ -46,9 +43,6 @@ export default function RegisterForm() {
       setTicketType("workshop_jam");
     } catch (err) {
       setStatus("error");
-      setErrorMessage(
-        err instanceof Error ? err.message : "Something went wrong",
-      );
     }
   }
 
@@ -107,7 +101,19 @@ export default function RegisterForm() {
       >
         {status === "loading" ? "Submitting..." : "Register"}
       </button>
-      {status === "error" && <p>{errorMessage}</p>}
+      {status === "error" && (
+        <p>
+          Something went wrong — to confirm that you will be at the jam, send an
+          IG message to{" "}
+          <a
+            href="https://www.instagram.com/jauhien_mdr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jauhien
+          </a>
+        </p>
+      )}
     </form>
   );
 }

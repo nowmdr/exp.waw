@@ -34,10 +34,6 @@ export default function Home() {
             <p>CoDa Movement, Kijowska 11, 03-743 Warszawa</p>
           </div>
           <div className={styles.contentItem}>
-            <h3 className={styles.subtitle}>[Day | Time]</h3>
-            <p>Saturday, March 21 | 19:30 - 22:30</p>
-          </div>
-          <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Links]</h3>
             <a
               href={
@@ -48,6 +44,14 @@ export default function Home() {
             >
               Maps Location
             </a>
+          </div>
+        </div>
+      </section>
+      <section className={styles.sectionGrid}>
+        <div className={styles.content1}>
+          <div className={styles.contentItem}>
+            <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
+            <p>Saturday, March 21 | 19:30 - 22:30 | 20 PLN</p>
           </div>
         </div>
       </section>
