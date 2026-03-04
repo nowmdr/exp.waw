@@ -79,7 +79,7 @@ export default function RegisterForm() {
         required
       />
 
-      <div className={styles.radioGroup}>
+      {/* <div className={styles.radioGroup}>
         {(
           [
             { value: "workshop_jam", label: "Workshop + Jam" },
@@ -98,7 +98,7 @@ export default function RegisterForm() {
             {label}
           </label>
         ))}
-      </div>
+      </div> */}
 
       <button
         className={styles.submitButton}

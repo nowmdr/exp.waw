@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Day | Time]</h3>
-            <p>Saturday, February 28 | 19:30 - 22:30</p>
+            <p>Saturday, March 21 | 19:30 - 22:30</p>
           </div>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Links]</h3>
@@ -52,11 +52,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.sectionGrid}>
+      {/* <section className={styles.sectionGrid}>
         <div className={styles.content1}>
           <AgendaSection />
         </div>
-      </section>
+      </section> */}
       <section className={styles.sectionGrid}>
         <div className={styles.content1}>
           <div className={styles.contentItem}>
