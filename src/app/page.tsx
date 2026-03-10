@@ -51,7 +51,7 @@ export default function Home() {
         <div className={styles.content1}>
           <div className={styles.contentItem}>
             <h3 className={styles.subtitle}>[Day | Time | Price]</h3>
-            <p>Saturday, March 21 | 19:30 - 22:30 | 20 PLN</p>
+            <p>Saturday, March 21 | 19:30 - 21:30 | 20 PLN</p>
           </div>
         </div>
       </section>
