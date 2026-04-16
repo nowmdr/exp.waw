@@ -103,8 +103,8 @@ export default function RegisterForm() {
       </button>
       {status === "error" && (
         <p>
-          Something went wrong — to confirm that you will be at the jam, send an
-          IG message to{" "}
+          Something went wrong — to confirm that you will be at the jam, please send an
+          IG message to
           <a
             href="https://www.instagram.com/jauhien_mdr/"
             target="_blank"
